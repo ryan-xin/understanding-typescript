@@ -2,16 +2,24 @@
 //   name: string;
 //   age: number;
 // } = {
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
+
+// const ADMIN = 0;
+// const READ_ONLY = 1;
+// const AUTHOR = 2;
+
+const role = {
+  admin: 1,
+  read_only: 2,
+  author: 3
+}
+
+enum Role {ADMIN = 1, READ_ONLY, AUTHOR};
+
+const person = {
   name: 'ryan',
   age: 30,
   hobbies: ['Sports', 'Cooking'],
-  role: [2, 'author']
+  role: Role.ADMIN
 };
 
 // person.role.push('admin');
